@@ -2,7 +2,7 @@ import { ExtractedData } from 'sillytavern-utils-lib/types';
 import { context } from './config.js';
 import { st_echo } from 'sillytavern-utils-lib/config';
 
-const MAX_TOKENS = 4096;
+const MAX_TOKENS = 90000;
 
 export async function sendGenerateRequest(profileId: string, prompt: string): Promise<string | null> {
   const profile = context.extensionSettings.connectionManager!.profiles.find((p) => p.id === profileId);
